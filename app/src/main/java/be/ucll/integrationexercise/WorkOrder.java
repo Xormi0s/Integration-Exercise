@@ -9,6 +9,9 @@ public class WorkOrder {
     private int orderID;
 
     @NonNull
+    private String user;
+
+    @NonNull
     private String city;
 
     @NonNull
@@ -34,12 +37,9 @@ public class WorkOrder {
         this.customerName = customerName;
     }
 
+    @NonNull
     public int getOrderID() {
         return orderID;
-    }
-
-    public void setOrderID(int orderID) {
-        this.orderID = orderID;
     }
 
     @NonNull
@@ -47,17 +47,9 @@ public class WorkOrder {
         return city;
     }
 
-    public void setCity(@NonNull String city) {
-        this.city = city;
-    }
-
     @NonNull
     public String getDevice() {
         return device;
-    }
-
-    public void setDevice(@NonNull String device) {
-        this.device = device;
     }
 
     @NonNull
@@ -65,21 +57,9 @@ public class WorkOrder {
         return problemCode;
     }
 
-    public void setProblemCode(@NonNull String problemCode) {
-        this.problemCode = problemCode;
-    }
-
     @NonNull
     public String getCustomerName() {
         return customerName;
-    }
-
-    public void setCustomerName(@NonNull String customerName) {
-        this.customerName = customerName;
-    }
-
-    public Boolean getProcessed() {
-        return processed;
     }
 
     public void setProcessed(Boolean processed) {

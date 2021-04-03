@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,20 +44,20 @@ public class loginuserActivity extends AppCompatActivity {
                 EditText inputPass = findViewById(R.id.editTextTextPersonName2);
                 String pass = inputPass.getText().toString();
 
-                /*if(){
-                    textView.setText("login is ok ");
-                } else {
-                    textView.setText("login is niet ok");
-                }*/
-                User test = userViewModel.login(username, pass).getValue();
-
-                List<User> test2 = userViewModel.getAllUsers().getValue();
-
-                if(test != null){
-                    textView.setText(test.getLastname());
-                } else {
-                   textView.setText("test " + username + " / " + pass);
-                }
+                 userViewModel.login(username, pass).observe(loginuserActivity.this, new Observer<User>() {
+                    @Override
+                    public void onChanged(User user) {
+                       if(user != null){
+                           Intent intent = new Intent(loginuserActivity.this, MainActivity.class);
+                           intent.putExtra("user", user.getUsername());
+                           intent.putExtra("firstname", user.getFirstname());
+                           intent.putExtra("lastname", user.getLastname());
+                           startActivity(intent);
+                       } else {
+                           textView.setText("User not found ! Provide correct username and password.");
+                       }
+                    }
+                });
             }
         });
 
