@@ -15,13 +15,13 @@ public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(User user);
 
-    @Query("DELETE FROM User")
+    @Query("DELETE FROM Users_table")
     void deleteAll();
 
-    @Query("SELECT * FROM User")
+    @Query("SELECT * FROM Users_table")
     LiveData<List<User>> getUser();
 
-    @Query("SELECT * FROM User where username =(:user) and password =(:pass)")
+    @Query("SELECT * FROM Users_table where username =(:user) and password =(:pass)")
     @Transaction
     LiveData<User> login(String user, String pass);
 
