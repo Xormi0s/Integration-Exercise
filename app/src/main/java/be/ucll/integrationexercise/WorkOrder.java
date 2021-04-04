@@ -1,8 +1,10 @@
 package be.ucll.integrationexercise;
 
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@Entity()
 public class WorkOrder {
 
     @PrimaryKey(autoGenerate =  true)
@@ -29,17 +31,25 @@ public class WorkOrder {
 
     private String repairInformation;
 
-    public WorkOrder(int orderID, @NonNull String city, @NonNull String device, @NonNull String problemCode, @NonNull String customerName) {
-        this.orderID = orderID;
+    public WorkOrder(@NonNull String user, @NonNull String city, @NonNull String device, @NonNull String problemCode, @NonNull String customerName) {
+        this.user = user;
         this.city = city;
         this.device = device;
         this.problemCode = problemCode;
         this.customerName = customerName;
     }
 
-    @NonNull
     public int getOrderID() {
         return orderID;
+    }
+
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
+    }
+
+    @NonNull
+    public String getUser() {
+        return user;
     }
 
     @NonNull
@@ -65,6 +75,8 @@ public class WorkOrder {
     public void setProcessed(Boolean processed) {
         this.processed = processed;
     }
+
+    public Boolean getProcessed() { return processed; }
 
     public String getDetailedProblemDescription() {
         return detailedProblemDescription;

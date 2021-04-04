@@ -8,8 +8,8 @@ import java.util.List;
 public class UserWorkOrders {
     @Embedded public User user;
     @Relation(
-        parentColumn = "orderID",
-        entityColumn = "workOrders"
+        parentColumn = "username",
+        entityColumn = "user"
     )
     public List<WorkOrder> workOrderList;
 }

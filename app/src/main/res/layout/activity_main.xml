@@ -4,19 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_login"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_baseline_handyman_24"
+        android:drawablePadding="20dp"
+        android:text="ElectroMan"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -27,40 +43,60 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/black_box_main"
+                android:backgroundTint="#af5ed1"
+                android:backgroundTintMode="add"
                 android:text="Name"
-                android:textAlignment="viewStart" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/black_box_main"
+                android:backgroundTint="#af5ed1"
+                android:backgroundTintMode="add"
                 android:text="Device"
-                android:textAlignment="viewStart" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/black_box_main"
+                android:backgroundTint="#af5ed1"
+                android:backgroundTintMode="add"
                 android:text="City"
-                android:textAlignment="viewStart" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/black_box_main"
+                android:backgroundTint="#af5ed1"
+                android:backgroundTintMode="add"
                 android:text="Code"
-                android:textAlignment="viewStart" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/black_box_main"
+                android:backgroundTint="#af5ed1"
+                android:backgroundTintMode="add"
                 android:text="Processed"
-                android:textAlignment="viewStart" />
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF" />
         </TableRow>
 
     </TableLayout>
@@ -69,12 +105,12 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
