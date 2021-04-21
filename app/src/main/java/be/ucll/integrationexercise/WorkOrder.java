@@ -31,12 +31,13 @@ public class WorkOrder {
 
     private String repairInformation;
 
-    public WorkOrder(@NonNull String user, @NonNull String city, @NonNull String device, @NonNull String problemCode, @NonNull String customerName) {
+    public WorkOrder(@NonNull String user, @NonNull String city, @NonNull String device, @NonNull String problemCode, @NonNull String customerName, String detailedProblemDescription) {
         this.user = user;
         this.city = city;
         this.device = device;
         this.problemCode = problemCode;
         this.customerName = customerName;
+        this.detailedProblemDescription = detailedProblemDescription;
     }
 
     public int getOrderID() {

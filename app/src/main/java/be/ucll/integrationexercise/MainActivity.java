@@ -81,10 +81,12 @@ public class MainActivity extends AppCompatActivity {
 
                     if(order.getProcessed() == true){
                         processed.setText("YES");
+                        processed.setBackgroundColor(Color.parseColor("#13a838"));
                     } else {
                         processed.setText("NO");
+                        processed.setBackgroundColor(Color.parseColor("#e32b2b"));
                     }
-                    processed.setBackgroundColor(Color.parseColor("#13a838"));
+
                     processed.setTextColor(Color.WHITE);
 
                     row.addView(name);

@@ -53,11 +53,11 @@ public abstract class UserRoomDatabase extends RoomDatabase {
                 User user = new User("jonasB", "test123", "Jonas", "Bourguignon");
                 userDao.insert(user);
 
-                WorkOrder order1 = new WorkOrder("jonasB", "Leuven", "Microgolf", "A02", "Francis");
-                WorkOrder order2 = new WorkOrder("jonasB", "Hasselt", "Vaatwasmachine", "B04", "Peter");
-                WorkOrder order3 = new WorkOrder("jonasB", "Antwerpen", "Kookplaat", "C07", "Francesca");
-                WorkOrder order4 = new WorkOrder("jonasB", "Gent", "Printer", "D05", "Peter");
-                WorkOrder order5 = new WorkOrder("jonasB", "Brussel", "Fax", "F09", "Marleen");
+                WorkOrder order1 = new WorkOrder("jonasB", "Leuven", "Microgolf", "A02", "Francis", "Verlichtingslampje binnenkant werkt niet meer.");
+                WorkOrder order2 = new WorkOrder("jonasB", "Hasselt", "Vaatwasmachine", "B04", "Peter", "Water loopt niet volledig weg.");
+                WorkOrder order3 = new WorkOrder("jonasB", "Antwerpen", "Kookplaat", "C07", "Francesca", "Draaiknop temperatuur afgebroken.");
+                WorkOrder order4 = new WorkOrder("jonasB", "Gent", "Printer", "D05", "Peter", "Lamp voor scannen werkt niet meer.");
+                WorkOrder order5 = new WorkOrder("jonasB", "Brussel", "Fax", "F09", "Marleen", "Foutcode x023");
                 workOrderDao.insert(order1);
                 workOrderDao.insert(order2);
                 workOrderDao.insert(order3);

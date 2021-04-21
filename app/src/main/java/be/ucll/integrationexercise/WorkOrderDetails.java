@@ -45,26 +45,8 @@ public class WorkOrderDetails extends AppCompatActivity {
 
         save.setText("Back");
         TextView info = findViewById(R.id.textView15);
+        problemText.setEnabled(false);
 
-        problemText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                input1 = true;
-                if(input1 && input2){
-                    save.setText("Save");
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
         repairText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -74,10 +56,7 @@ public class WorkOrderDetails extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                input2 = true;
-                if(input1 && input2){
                     save.setText("Save");
-                }
             }
 
             @Override
@@ -90,8 +69,8 @@ public class WorkOrderDetails extends AppCompatActivity {
             @Override
             public void onChanged(WorkOrder workOrder) {
                 info.setText(workOrder.getCustomerName() + ", " + workOrder.getCity() + ", " + workOrder.getDevice());
+                problemText.setText(workOrder.getDetailedProblemDescription());
                 if (workOrder.getProcessed() == true) {
-                    problemText.setText(workOrder.getDetailedProblemDescription());
                     repairText.setText(workOrder.getRepairInformation());
                     save.setText("Back");
                     problemText.setEnabled(false);
